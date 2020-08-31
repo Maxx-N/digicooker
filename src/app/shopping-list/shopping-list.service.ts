@@ -19,4 +19,12 @@ export class ShoppingListService {
     this.ingredients.push(ingredient);
     this.ingredientsChanged.emit(this.getIngredients());
   }
+
+  addManyIngredients(ingredients: Ingredient[]): void {
+    // ingredients.forEach((ingredient) => {
+    //   this.addIngredient(ingredient);
+    // });
+    this.ingredients.push(...ingredients);
+    this.ingredientsChanged.emit(this.getIngredients());
+  }
 }
