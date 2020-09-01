@@ -9,7 +9,7 @@ export class RecipeService {
   private recipes: Recipe[] = [
     new Recipe(
       'Steak & Fries',
-      'Fry the potatoes in oil. Cook the steak over high heat, one minute on each side.',
+      'Fry the potatoes. Cook the steak 1 minute per side.',
       'https://live.staticflickr.com/1070/5135326813_88d98ed056_b.jpg',
       [new Ingredient('Meat', 1), new Ingredient('French Fries', 20)]
     ),
@@ -25,6 +25,10 @@ export class RecipeService {
 
   getRecipes(): Recipe[] {
     return this.recipes.slice();
+  }
+
+  getRecipe(index: number): Recipe {
+    return this.getRecipes()[index];
   }
 
   addIngredientsToShoppingList(ingredients: Ingredient[]): void {
