@@ -7,10 +7,11 @@ import { Ingredient } from '../shared/ingredient.model';
 export class ShoppingListService {
   ingredientsChanged: Subject<Ingredient[]> = new Subject<Ingredient[]>();
   startedEditing: Subject<number> = new Subject<number>();
-  private ingredients: Ingredient[] = [
-    new Ingredient('Carrots', 5),
-    new Ingredient('Eggplants', 8),
-  ];
+  // private ingredients: Ingredient[] = [
+  //   new Ingredient('Carrots', 5),
+  //   new Ingredient('Eggplants', 8),
+  // ];
+  private ingredients: Ingredient[] = [];
 
   getIngredients(): Ingredient[] {
     return this.ingredients.slice();
