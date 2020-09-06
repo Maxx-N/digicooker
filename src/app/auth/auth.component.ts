@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   templateUrl: './auth.component.html',
 })
 export class AuthComponent implements OnInit {
-  isLoginMode: boolean = false;
+  isLoginMode: boolean = true;
   authForm: FormGroup;
   isLoading: boolean = false;
   error: string = null;
