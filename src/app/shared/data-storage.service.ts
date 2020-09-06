@@ -14,7 +14,6 @@ export class DataStorageService {
     this.http
       .put('https://digicooker-971ff.firebaseio.com/recipes.json', recipes)
       .subscribe((responseData) => {
-        console.log(responseData);
       });
   }
 
@@ -43,7 +42,6 @@ export class DataStorageService {
         }),
         tap((recipes) => {
             this.recipeService.setRecipes(recipes);
-            console.log(recipes);
           })
       )
       
