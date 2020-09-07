@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    RouterModule.forChild([{ path: 'auth', component: AuthComponent }]),
+    RouterModule.forChild([{ path: '', component: AuthComponent }]),
     SharedModule,
   ],
   exports: [AuthComponent, ReactiveFormsModule, RouterModule],
